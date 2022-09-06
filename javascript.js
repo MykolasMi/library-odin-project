@@ -6,7 +6,7 @@ const read = document.getElementById('read');
 const submitButton = document.getElementById('submitButton');
 
 const form = document.getElementById('form');
-const tableRow = document.getElementById('tableRow');
+const table = document.getElementById('table');
 
 let library = [
     {
@@ -48,10 +48,13 @@ form.addEventListener('submit', function(e){
 let i = 0;
 function displayBooks () {
     for(i; i<library.length; i++) {
+        const row = document.createElement('tr')
         const cBookName = document.createElement('td');
         const cAuthor = document.createElement('td');
         const cPages = document.createElement('td');
         const cRead = document.createElement('td');
+        const button = document.createElement('button');
+        button.setAttribute('type', 'button');
 
         //card.classList.add('STYLING');
         cBookName.textContent = library[i].bookName;
@@ -59,10 +62,13 @@ function displayBooks () {
         cPages.textContent = library[i].pages;
         cRead.textContent = library[i].read;
         
-        tableRow.appendChild(cBookName);
-        tableRow.appendChild(cAuthor);
-        tableRow.appendChild(cPages);
-        tableRow.appendChild(cRead);
+        table.appendChild(row);
+
+        row.append(cBookName); //neleidzia append child metodo ant row, ant kitu irgi neleidzia bbz kodel. yra priezastis, reik praeiti pro dom manipulation 
+        row.append(cAuthor);
+        row.append(cPages);
+        row.append(cRead);
+        row.append(button);
 
         console.log('loop');
     }
