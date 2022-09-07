@@ -35,14 +35,12 @@ function addBookToLibrary () {
     console.log(book);
 }
 
-//book.prototype = Object.create(addBookToLibrary.prototype)
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    //let book = new newBook(bookName, author, pages, read);
     addBookToLibrary();
 
-    console.log("submitButton")
+    console.log("submitButton");
 })
 
 let i = 0;
@@ -54,23 +52,37 @@ function displayBooks () {
         const cPages = document.createElement('td');
         const cRead = document.createElement('td');
         const button = document.createElement('button');
-        button.setAttribute('type', 'button');
+        const buttonIcon = document.createElement('span')
 
         //card.classList.add('STYLING');
         cBookName.textContent = library[i].bookName;
         cAuthor.textContent = library[i].author;
         cPages.textContent = library[i].pages;
         cRead.textContent = library[i].read;
+
+        buttonIcon.textContent = "delete_forever";
+        buttonIcon.setAttribute('class', 'material-symbols-outlined');
+        button.setAttribute('type', 'button');
+        /*button.setAttribute()
+        cBookName.setAttribute()
+        cAuthor.setAttribute()
+        cPages.setAttribute()
+        cRead.setAttribute()*/
         
         table.appendChild(row);
+        button.appendChild(buttonIcon);
+        row.appendChild(cBookName);
+        row.appendChild(cAuthor);
+        row.appendChild(cPages);
+        row.appendChild(cRead);
+        row.appendChild(button);
 
-        row.append(cBookName); //neleidzia append child metodo ant row, ant kitu irgi neleidzia bbz kodel. yra priezastis, reik praeiti pro dom manipulation 
-        row.append(cAuthor);
-        row.append(cPages);
-        row.append(cRead);
-        row.append(button);
+        button.addEventListener("click", function(e) {
+            table.removeChild(row);
+            console.log(e.datasetkey)
+        })
 
         console.log('loop');
     }
-    console.log('f.displayBooks')
+    console.log('f.displayBooks');
 }

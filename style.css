@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+
+body {
+}
+.content {
+    margin: 0vh 20vw;
+    font-family: 'Rubik', 'Roboto', sans-serif;
+}
+
+.topText {
+    font-size: 3rem;
+}
+
+.bottomText {
+    font-weight: lighter;
+    font-size: 0.9rem
+
+}
+
+.header {
+    margin-top: 10vh;
+    margin-bottom: 20px;
+}
+
+tr {
+    display: flex;
+}
+
+td {
+    display: flex;
+    width: 12vw;
+}

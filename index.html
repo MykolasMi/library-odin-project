@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Library | The Odin Project</title>
 </head>
 <body>
-    <div class="header">
-        <span>Book Library</span>
-    </div>
     <div class="content">
+        <div class="header">
+            <div class="topText">A book library.</div>
+            <div class="bottomText">A project for <a href="https://www.theodinproject.com/">The Odin Project</a>in which I have to create a library using <i>Object Constructors</i></div>
+        </div>
         <form id="form">
             <div><label for="name">Book name</label></div>
             <div><input type="text" name="name" id="name" required></div>
@@ -29,7 +31,12 @@
         </form>
         <div class="libraryContainer">
             <table id="table">
-
+                <tr>
+                    <td>Book name</td>
+                    <td>Author</td>
+                    <td>pages</td>
+                    <td>Read</td>
+                </tr>
             </table>
         </div>
     </div>
