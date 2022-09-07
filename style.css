@@ -30,3 +30,29 @@ td {
     display: flex;
     width: 12vw;
 }
+
+.button button {
+    \border: none;
+    align-items: center;
+    display: flex;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button span:hover {
+    color: white;
+    background-color: lightslategray;
+    border-radius: 5px;
+}
+
+.display {
+    display: block;
+}
+
+.noDisplay {
+    display: none;
+}

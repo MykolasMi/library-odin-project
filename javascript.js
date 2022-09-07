@@ -4,9 +4,17 @@ const pages = document.getElementById('pages');
 const read = document.getElementById('read');
 
 const submitButton = document.getElementById('submitButton');
+const addButton = document.getElementById('add');
 
 const form = document.getElementById('form');
 const table = document.getElementById('table');
+
+form.classList.toggle('noDisplay')
+
+addButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    form.classList.toggle('noDisplay')
+})
 
 let library = [
     {
@@ -39,6 +47,7 @@ function addBookToLibrary () {
 form.addEventListener('submit', function(e){
     e.preventDefault();
     addBookToLibrary();
+    form.classList.remove('display');
 
     console.log("submitButton");
 })
