@@ -32,9 +32,12 @@ td {
 }
 
 .button button {
-    \border: none;
     align-items: center;
     display: flex;
+    border: 2px solid #e1d7c8;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.1rem;
 }
 
 .button{
@@ -43,16 +46,52 @@ td {
     margin-top: 20px;
 }
 
-.button span:hover {
-    color: white;
-    background-color: lightslategray;
+.button button:hover {
     border-radius: 5px;
+    border: 2px solid rgb(145, 145, 145);
+    background-color:honeydew;
 }
 
-.display {
-    display: block;
+content .libraryContainer {
+    display:block;
 }
 
 .noDisplay {
     display: none;
+}
+
+form {
+    background-color: #e1d7c8;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 25vw;
+    height: 32vh;
+    justify-content: center;
+    margin: 0px 14.5vw;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+form div {
+    flex: 1;
+}
+
+.darker {
+    background-color: #4f4a47;
+    filter: alpha(opacity=60);
+    filter:blur(50%)
+}
+
+.darker button {
+    border: 0px solid white;
+}
+
+.darker button:hover {
+    border: 0px solid white;
+    background-color: #4f4a47;
+}
+
+a {
+    color: black;
 }

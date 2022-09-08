@@ -8,12 +8,17 @@ const addButton = document.getElementById('add');
 
 const form = document.getElementById('form');
 const table = document.getElementById('table');
+const body = document.querySelector('body');
+const header = document.querySelector('.header');
+const libraryContainer = document.querySelector('.libraryContainer')
 
 form.classList.toggle('noDisplay')
 
 addButton.addEventListener("click", function(e) {
     e.preventDefault();
-    form.classList.toggle('noDisplay')
+    form.classList.toggle('noDisplay');
+    body.classList.toggle('darker');
+    addButton.classList.toggle('darker');
 })
 
 let library = [
@@ -47,7 +52,9 @@ function addBookToLibrary () {
 form.addEventListener('submit', function(e){
     e.preventDefault();
     addBookToLibrary();
-    form.classList.remove('display');
+    form.classList.toggle('noDisplay');
+    body.classList.toggle('darker');
+    addButton.classList.toggle('darker');
 
     console.log("submitButton");
 })
