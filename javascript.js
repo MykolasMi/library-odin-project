@@ -35,17 +35,12 @@ function newBook(bookName, author, pages, read) {
     this.author = author.value;
     this.pages = pages.value;
     this.read = read.checked;
-
-    console.log("f.book");
 }
 
 function addBookToLibrary () {
     let book = new newBook(bookName, author, pages, read);
     library.push(book);
     displayBooks();
-
-    console.log("f.addBookToLibrary");
-    console.log(book);
 }
 
 
@@ -55,8 +50,6 @@ form.addEventListener('submit', function(e){
     form.classList.toggle('noDisplay');
     body.classList.toggle('darker');
     addButton.classList.toggle('darker');
-
-    console.log("submitButton");
 })
 
 let i = 0;
@@ -70,7 +63,6 @@ function displayBooks () {
         const button = document.createElement('button');
         const buttonIcon = document.createElement('span')
 
-        //card.classList.add('STYLING');
         cBookName.textContent = library[i].bookName;
         cAuthor.textContent = library[i].author;
         cPages.textContent = library[i].pages;
@@ -79,11 +71,6 @@ function displayBooks () {
         buttonIcon.textContent = "delete_forever";
         buttonIcon.setAttribute('class', 'material-symbols-outlined');
         button.setAttribute('type', 'button');
-        /*button.setAttribute()
-        cBookName.setAttribute()
-        cAuthor.setAttribute()
-        cPages.setAttribute()
-        cRead.setAttribute()*/
         
         table.appendChild(row);
         button.appendChild(buttonIcon);
@@ -95,10 +82,6 @@ function displayBooks () {
 
         button.addEventListener("click", function(e) {
             table.removeChild(row);
-            console.log(e.datasetkey)
         })
-
-        console.log('loop');
     }
-    console.log('f.displayBooks');
 }
